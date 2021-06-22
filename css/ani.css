@@ -1,0 +1,11 @@
+.character_ani {
+    height: 91.52px;
+    transition-duration: 0.5s;
+    opacity: 1;
+}
+
+.character_hide {
+    height: 0px;
+    opacity: 0;
+    visibility: hidden;
+}

@@ -23,6 +23,27 @@ function GoToTop() {
     });
 }
 
+//變更分隔顏色
+function ChangeHrColor(className) {
+    switch (className) {
+        case "black_eagles":
+            $(".character_hr").css("filter", "sepia() saturate(30) hue-rotate(295deg)");
+            break;
+        case "blue_lions":
+            $(".character_hr").css("filter", "sepia() saturate(30) hue-rotate(105deg)");
+            break;
+        case "golden_deer":
+            $(".character_hr").css("filter", "sepia() saturate(30) hue-rotate(5deg)");
+            break;
+        case "church":
+            $(".character_hr").css("filter", "sepia() saturate(30) hue-rotate(183deg)");
+            break;
+        case "knight":
+            $(".character_hr").css("filter", "sepia() saturate(30) hue-rotate(70deg)");
+            break;
+    }
+}
+
 //取得角色資料
 function ChooseCharacter(name) {
     GoToTop();
@@ -36,6 +57,7 @@ function ChooseCharacter(name) {
             $(".character_flag").attr("src", "./pic/class/" + Jdata.class + "_flag.png");
             $(".character_pic").attr("src", "./pic/character/" + Jdata.nick + ".png");
             $(".character_name").html(Jdata.name);
+            ChangeHrColor(Jdata.class);
             //$(".character_hr")
             $(".character_introduction").html(Jdata.note);
             $(".lost").html(Jdata.lose);

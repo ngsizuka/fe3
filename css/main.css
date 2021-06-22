@@ -1,3 +1,6 @@
+span, td, div {
+    font-size: large;
+}
 .class_bar {
     position: fixed;
     width: 100%;
@@ -82,9 +85,6 @@
 }
 .character_hr {
     padding: 10px;
-    filter: sepia() saturate(30) hue-rotate(295deg);
-    /*filter: sepia() saturate(30) hue-rotate(105deg);
-    filter: sepia() saturate(30) hue-rotate(5deg);*/
 }
 .group_introduction {
     display: flex;

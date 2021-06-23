@@ -1,0 +1,84 @@
+.main_nav {
+    margin-left: -20px;
+}
+
+.nav_bar {
+    position: fixed;
+    top: 175px;
+    margin: -6.5em 0 0 13px;
+    width: 120px;
+    list-style-type: devanagari;
+    padding: 30px;
+    line-height: 2;
+}
+.nav_bar a {
+    color: #696666;
+    text-decoration: none;
+}
+
+.nav_bg {
+    width: 180px;
+    position: fixed;
+    top: 175px;
+    margin: -7.5em 0 0 0;
+}
+
+.nav_toggle {
+    position: fixed;
+    z-index: 10;
+    margin: 5px 0 0 20px;
+}
+.nav_toggle .bar {
+    /* 區塊化+設定寬高背景色間距 */
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: black;
+    margin-bottom: 10px;
+    /* 轉場時間-在變動的CSS上套入漸變 */
+    transition-duration: 0.5s;
+    /* 微調中心點 */
+    transform-origin: 73%;
+}
+/* toggle變更時線條變更 */
+.nav_toggle .bar:nth-child(1) {
+    opacity: 1;
+}
+/* toggle變更時線條變更 */
+.pushed .bar:nth-child(1) {
+    opacity: 0;
+}
+/* 轉動線條 */
+.pushed .bar:nth-child(2) {
+    transform: rotate(-45deg);
+}
+/* 轉動線條 */
+.pushed .bar:nth-child(3) {
+    transform: rotate(45deg);
+}
+/* 調整第一跟三條線的樣式 */
+.nav_toggle .bar:nth-child(odd) {
+    /* 主色跟背景相同 */
+    background: gray;
+    /* 長度 */
+    width: 5px;
+    /* 往左邊加上額外的線段 */
+    border-left: 30px solid #fff;
+    /* 往右邊加上額外的線段 */
+    border-right: 5px solid #d6d6d6;
+}
+/* 調整第二條線的樣式 */
+.nav_toggle .bar:nth-child(2) {
+    background: gray;
+    width: 5px;
+    border-right: 30px solid #fff;
+    border-left: 5px solid #d6d6d6;
+}
+/*關選單*/
+.noneshow {
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+.menu {
+    transition-duration: 0.8s;
+}

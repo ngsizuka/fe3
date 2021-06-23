@@ -1,3 +1,8 @@
+html {
+    background-image: url(../pic/bg.png);
+    background-size: 100% 1px;
+}
+
 span, td, div {
     font-size: large;
 }
@@ -156,7 +161,7 @@ table {
     padding: 0px 15px;
 }
 
-.data_ori {
+.data_ori, .data_ori > span {
     font-size: 8px;
     text-align: center;
     bottom: 0px;

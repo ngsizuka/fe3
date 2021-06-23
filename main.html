@@ -5,14 +5,17 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/ani.css">
+    <link rel="stylesheet" href="./css/nvabar.css">
     <script src="./json/edelgard.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/nav.js"></script>
     <title>風花雪月 簡易攻略</title>
 </head>
-<body style="background-image:url(./pic/bg.png); background-size: 100% 1px;">
+<body>
+    <div class="main_nav">
+    </div>
     <div style="text-align:center;">
-        <div class="main_bar"></div>
         <div>
             <div class="class_bar">
                 <button type="button" onclick="ChooseClass('class1')">
@@ -75,7 +78,7 @@
                     <input type="image" onclick=(ChooseCharacter('flayn')) src="./pic/character/flayn_btn.png" />
                     <input type="image" onclick=(ChooseCharacter('jeritza')) src="./pic/character/jeritza_btn.png" />
                     <input type="image" onclick=(ChooseCharacter('cyril')) src="./pic/character/cyril_btn.png" />
-                    <input type="image" onclick=() src="./pic/character/edelgard_btn.png" style="visibility: hidden;"/>
+                    <input type="image" onclick=() src="./pic/character/edelgard_btn.png" style="visibility: hidden;" />
                 </div>
                 <div class="knight character_ani">
                     <input type="image" onclick=(ChooseCharacter('catherine')) src="./pic/character/catherine_btn.png" />
@@ -126,13 +129,11 @@
                 </div>
                 <div class="block_4">
                     <div class="title">茶會話題</div>
-                    <table class="tea_dialog_body">
-                    </table>
+                    <table class="tea_dialog_body"></table>
                 </div>
                 <div class="block_5">
                     <div class="title">茶會結束後對話</div>
-                    <table class="tea_perfect_body">
-                    </table>
+                    <table class="tea_perfect_body"></table>
                 </div>
             </div>
             <div class="end_border border"></div>

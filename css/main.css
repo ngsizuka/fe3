@@ -1,21 +1,13 @@
-html {
-    background-image: url(../pic/bg.png);
-    background-size: 100% 1px;
-}
-
-span, td, div {
-    font-size: large;
-}
 .class_bar {
     position: fixed;
     width: 100%;
-    /*¾×¦íºu°Ê«áªº¸ê®Æ¥Î*/
+    /*æ“‹ä½æ»¾å‹•å¾Œçš„è³‡æ–™ç”¨*/
     top: 0;
     left: 0;
     padding-top: 10px;
     background-image: url(../pic/bg.png);
     background-size: 100% 1px;
-    /*¾×¨¤¦â¹Ï*/
+    /*æ“‹è§’è‰²åœ–*/
     z-index: 1;
 }
 .class_bar > button {
@@ -29,13 +21,13 @@ span, td, div {
     width: 140px;
     pointer-events: none;
 }
-    .class_bar > button > span {
-        position: absolute;
-        color: white;
-        font-weight: 800;
-        transform: translate(-56%, -114%);
-        pointer-events: none;
-    }
+.class_bar > button > span {
+    position: absolute;
+    color: white;
+    font-weight: 800;
+    transform: translate(-56%, -114%);
+    pointer-events: none;
+}
 
 .character_bar {
     padding-top: 35px;
@@ -44,26 +36,8 @@ span, td, div {
     margin: 7px;
 }
 
-.border {
-    width: 715px;
-    height: 22px; /*®³¹Ï¤ù°ª«×¥Î*/
-    margin: auto;
-    background-image: url(../pic/border.png);
-    background-repeat: repeat-x;
-}
-.end_border {
-    transform: rotateX(180deg);
-}
-
-.character_note_body {
-    width: 715px;
-    margin: auto;
-    background-image: url(../pic/body.png);
-    background-repeat: repeat;
-}
-
 .block_1 {
-    /*¼e°ª¸ò¨¤¦â¦P*/
+    /*å¯¬é«˜è·Ÿè§’è‰²åŒ*/
     width: 250px;
     height: 250px;
     text-align: initial;
@@ -151,23 +125,12 @@ table {
 .block_4 > table > tbody > tr > td:first-child {
    padding: 0px 15px;
 }
-/*°Ý*/
+/*å•*/
 .block_5 > table > tbody > tr > td:not(:first-child) {
     width: 80px;
 }
-/*µª*/
+/*ç­”*/
 .block_5 > table > tbody > tr > td:first-child {
     text-align: initial;
     padding: 0px 15px;
-}
-
-.data_ori, .data_ori > span {
-    font-size: 8px;
-    text-align: center;
-    bottom: 0px;
-    color: #c1bbbb;
-}
-.data_ori > a {
-    color: #c1bbbb;
-    text-decoration: none;
 }

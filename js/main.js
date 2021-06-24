@@ -1,17 +1,17 @@
 $(function () {
-    //¥ıÁôÂÃ¨¤¦â¸ê®Æ
+    //å…ˆéš±è—è§’è‰²è³‡æ–™
     $(".character_note").css("display", "none");
 });
 
-//¿ï¾Ü¾Ç¯Å
+//é¸æ“‡å­¸ç´š
 function ChooseClass(classname) {
     for (let i = 0; i < $(".character_bar > div").length; i++) {
-        //ÁôÂÃ©Ò¦³¾Ç¯Å
+        //éš±è—æ‰€æœ‰å­¸ç´š
         $(".character_bar > div")[i].classList.add("character_hide");
     }
     if (classname) {
         $("." + classname).removeClass("character_hide");
-        //±a·Æ°Ê®ÄªGªº¸õÂà
+        //å¸¶æ»‘å‹•æ•ˆæœçš„è·³è½‰
         $("html,body").animate({scrollTop: 0}, 1000);  
     }
 }
@@ -23,7 +23,7 @@ function GoToTop() {
     });
 }
 
-//ÅÜ§ó¤À¹jÃC¦â
+//è®Šæ›´åˆ†éš”é¡è‰²
 function ChangeHrColor(className) {
     switch (className) {
         case "black_eagles":
@@ -44,65 +44,57 @@ function ChangeHrColor(className) {
     }
 }
 
-//¨ú±o¨¤¦â¸ê®Æ
+//å–å¾—è§’è‰²è³‡æ–™
 function ChooseCharacter(name) {
     GoToTop();
-    $.ajax({
-        url: "./json/" + name + ".json",
-        type: "GET",
-        dataType: "json",
-        success: function (Jdata) {
-            ChooseClass(); 
-            $(".character_note").css("display", "initial");
-            $(".character_flag").attr("src", "./pic/class/" + Jdata.class + "_flag.png");
-            $(".character_pic").attr("src", "./pic/character/" + Jdata.nick + ".png");
-            $(".character_name").html(Jdata.name);
-            ChangeHrColor(Jdata.class);
-            //$(".character_hr")
-            $(".character_introduction").html(Jdata.note);
-            $(".lost").html(Jdata.lose);
-            $(".gift").html(Jdata.gift);
-            $(".flower").html(Jdata.flower);
-            $(".tea").html(Jdata.tea);
+    GetJsonData(name, ShowData);
+}
+function ShowData(Jdata) {
+    ChooseClass();
+    $(".character_note").css("display", "initial");
+    $(".character_flag").attr("src", "./pic/class/" + Jdata.class + "_flag.png");
+    $(".character_pic").attr("src", "./pic/character/" + Jdata.nick + ".png");
+    $(".character_name").html(Jdata.name);
+    ChangeHrColor(Jdata.class);
+    //$(".character_hr")
+    $(".character_introduction").html(Jdata.note);
+    $(".lost").html(Jdata.lose);
+    $(".gift").html(Jdata.gift);
+    $(".flower").html(Jdata.flower);
+    $(".tea").html(Jdata.tea);
 
-            let teaPerfectDialog = [];
-            let perfectLarge = 0;
-            for (let i = 0; i < Jdata.tea_perfect.length; i++) {
-                teaPerfectDialog[i] = Jdata.tea_perfect[i].split("_");
-                if (teaPerfectDialog[i].length > perfectLarge) perfectLarge = teaPerfectDialog[i].length;
-            }
+    let teaPerfectDialog = [];
+    let perfectLarge = 0;
+    for (let i = 0; i < Jdata.tea_perfect.length; i++) {
+        teaPerfectDialog[i] = Jdata.tea_perfect[i].split("_");
+        if (teaPerfectDialog[i].length > perfectLarge) perfectLarge = teaPerfectDialog[i].length;
+    }
 
-            //»s§@table
-            let tableStr = "<tbody>";
-            for (let i = 0; i < teaPerfectDialog.length; i++) {
-                tableStr += "<tr>";
-                for (let j = 0; j < perfectLarge; j++) {
-                    tableStr += "<td>";
-                    tableStr += (teaPerfectDialog[i][j]) ? teaPerfectDialog[i][j] : "";
-                    tableStr += "</td>";
-                }
-                tableStr += "</tr>";
-            }
-            tableStr += "</tbody>";
-            $(".tea_perfect_body").html(tableStr);
-
-            GetTeaDialog(Jdata.nick);
-        },
-
-        error: function (err) {
-            console.log(err)
+    //è£½ä½œtable
+    let tableStr = "<tbody>";
+    for (let i = 0; i < teaPerfectDialog.length; i++) {
+        tableStr += "<tr>";
+        for (let j = 0; j < perfectLarge; j++) {
+            tableStr += "<td>";
+            tableStr += (teaPerfectDialog[i][j]) ? teaPerfectDialog[i][j] : "";
+            tableStr += "</td>";
         }
-    });
+        tableStr += "</tr>";
+    }
+    tableStr += "</tbody>";
+    $(".tea_perfect_body").html(tableStr);
+
+    GetTeaDialog(Jdata.nick);
 }
 
-//¨ú±o¯ù·|¸ê®Æ
+//å–å¾—èŒ¶æœƒè³‡æ–™
 function GetTeaDialog(name) {
     $.ajax({
         url: "./json/tea_dialog.json",
         type: "GET",
         dataType: "json",
         success: function (Jdata) {
-            //¨ú¨¤¦â¹ïÀ³­È
+            //å–è§’è‰²å°æ‡‰å€¼
             let tea_dialog = []
             for (let i = 0; i < Jdata.tea_dialog.length; i++) {
                 let characterArr = [];

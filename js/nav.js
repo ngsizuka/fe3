@@ -9,7 +9,7 @@ $(function () {
     str += "<img class='nav_bg' src='./pic/frame2.png' />";
     str += "<ul class='nav_bar'>";
     str += "<li><a href='./main.html'>茶會送禮資料</a></li>";
-    str += "<li><a href=''>失物位置</a></li>";
+    str += "<li><a href='./lost.html'>失物位置</a></li>";
     str += "<li><a href=''>信件查詢</a></li>";
     str += "<li><a href=''>兵種介紹</a></li>";
     str += "<li><a href=''>魔獸掉落物</a></li>";

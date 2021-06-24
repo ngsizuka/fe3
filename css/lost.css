@@ -1,0 +1,52 @@
+.lost_tip {
+    text-align: left;
+    line-height: 2;
+}
+.tip {
+    padding: 10px 25px;
+}
+
+.lost_month {
+    padding: 19px 27px;
+    background-image: url("../pic/tipclick.png");
+    width: 240px;
+    height: 28px;
+    color: white;
+    font-weight: 800;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-top: 10px;
+    background-position: center;
+    vertical-align: text-top;
+    cursor: pointer;
+}
+.lost_month > span {
+    margin-left: 5px;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+.change_rotate > span:first-child {
+    transform: rotate(90deg);
+}
+
+table {
+    width: 100%;
+    padding: 10px 25px;
+}
+table td:not(:first-child) {
+    width: 30%;
+}
+tr > td {
+    text-align: center;
+    line-height: 2;
+    border-style: dotted;
+    border-color: #b4b1a0;
+    border-collapse: collapse;
+    border-width: 0px 2px 2px 0px;
+}
+tr:first-child > td {
+    border-top-width: 2px;
+}
+td:last-child {
+    border-right-width: 0px;
+}

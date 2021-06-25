@@ -9,6 +9,20 @@
     font-size: 30px;
     margin: 10px;
 }
+.group_search {
+    display: inline-flex;
+    flex-direction: column;
+}
+#searchData {
+    text-align: left;
+    background-color: white;
+    margin: -10px 10px 10px 10px;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+.change_color {
+    color: red;
+}
 
 .lost_tip {
     text-align: left;

@@ -1,3 +1,15 @@
+.lost_search {
+    text-align: center;
+}
+.lost_search > span {
+    font-size: 30px;
+}
+.search_box {
+    width: 540px;
+    font-size: 30px;
+    margin: 10px;
+}
+
 .lost_tip {
     text-align: left;
     line-height: 2;

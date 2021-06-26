@@ -1,51 +1,20 @@
-.lost_search {
-    text-align: center;
-}
-.lost_search > span {
-    font-size: 30px;
-}
-.search_box {
-    width: 540px;
-    font-size: 30px;
-    margin: 10px;
-}
-.group_search {
-    display: inline-flex;
-    flex-direction: column;
-}
-#searchData {
-    text-align: left;
-    background-color: white;
-    margin: -10px 10px 10px 10px;
-    padding-left: 10px;
-    line-height: 1.5;
-}
-.change_color {
-    color: red;
+h1 {
+    display: inline-block;
 }
 
-.lost_tip {
+.part {
     text-align: left;
-    line-height: 2;
-}
-.tip {
-    padding: 10px 25px;
-}
-
-.lost_month {
     padding: 19px 27px;
     background-image: url("../pic/tipclick.png");
     width: 240px;
-    height: 28px;
     color: white;
     font-weight: 800;
     background-repeat: no-repeat;
-    padding-top: 10px;
     background-position: center;
     vertical-align: text-top;
     cursor: pointer;
 }
-.lost_month > span {
+.part > span {
     margin-left: 5px;
     display: inline-block;
     transition-duration: 0.5s;
@@ -54,27 +23,38 @@
     transform: rotate(90deg);
 }
 
-thead {
-    font-weight: bold;
-}
 table {
     width: 100%;
     padding: 10px 25px;
 }
-table td:not(:first-child) {
-    width: 30%;
+.title_group {
+    width: 56px;
 }
-tr > td {
+.character {
+    width:100px;
+}
+.msg, .ans {
+    text-align: left;
+}
+thead > tr > td {
+    font-weight: bold;
     text-align: center;
+    line-height: 2;
+    border-style: dotted;
+    border-color: #b4b1a0;
+    border-collapse: collapse;
+    border-width: 2px 2px 2px 0px;
+}
+.part_data > table > tbody > tr > td {
     line-height: 2;
     border-style: dotted;
     border-color: #b4b1a0;
     border-collapse: collapse;
     border-width: 0px 2px 2px 0px;
 }
-tr:first-child > td {
+.part_data > table > tbody > tr:first-child > td {
     border-top-width: 2px;
 }
-td:last-child {
+.part_data > table tr > td:last-child {
     border-right-width: 0px;
 }
